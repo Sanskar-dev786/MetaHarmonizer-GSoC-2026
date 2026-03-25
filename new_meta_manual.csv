@@ -1,0 +1,44 @@
+query,stage,method,match1,match1_score,match1_source,match2,match2_score,match2_source,match3,match3_score,match3_source,match4,match4_score,match4_source,match5,match5_score,match5_source
+study_name,stage3,semantic,study_design,0.7538,study type,treatment_group,0.7475,study group,location,0.6754,study site,specimen_type,0.3973,specimen type,specimen_type_ontology_term_id,0.365,
+sample_id,invalid,id_column,,,,,,,,,,,,,,,
+subject_id,invalid,id_column,,,,,,,,,,,,,,,
+body_site,stage1,std_exact,body_site,1.0,,,,,,,,,,,,,
+study_condition,stage3,semantic,study_design,0.7099,,treatment_group,0.6442,study group,location,0.5853,study site,disease,0.5452,condition,target_condition,0.3949,primary condition
+disease,stage1,std_exact,disease,1.0,,,,,,,,,,,,,
+age,stage1,alias_exact,age_at_diagnosis,1.0,age,,,,,,,,,,,,
+infant_age,stage3,numeric,age_at_diagnosis,0.8333,initial_age,age_at_diagnosis_min,0.6612,,age_at_diagnosis_max,0.632,,age_at_death,0.6275,death_age,age_at_procurement_min,0.6199,
+age_category,stage1,alias_exact,age_group,1.0,age_category,,,,,,,,,,,,
+gender,stage1,alias_exact,sex,1.0,gender,,,,,,,,,,,,
+country,stage1,std_exact,country,1.0,,,,,,,,,,,,,
+family,stage3,semantic,ancestry,0.5328,,country,0.4654,nation,ancestry_details,0.4358,ancestry details,treatment_name,0.4128,drug,sex,0.3795,
+treatment,stage1,alias_exact,treatment_type,1.0,treatment,,,,,,,,,,,,
+days_from_first_collection,stage3,numeric,treatment_start,0.6547,start_date,age_at_procurement,0.62,collection_age,treatment_end,0.4662,end_date,treatment_duration,0.2952,,treatment_frequency,0.2864,
+location,stage1,std_exact,location,1.0,,,,,,,,,,,,,
+travel_destination,stage3,semantic,location,0.5116,,country,0.4361,country,location_ontology_term_id,0.2964,,treatment_name,0.2862,drug,body_site,0.2605,site
+gestational_age,stage3,numeric,age_at_diagnosis,0.6546,initial_age,age_at_death,0.5715,age_at_death,age_at_metastasis,0.5604,age_at_metastasis,age_at_metastasis_min,0.5512,,age_at_diagnosis_min,0.5435,
+disease_subtype,stage3,semantic,cancer_subtype,0.6823,,cancer_type_details,0.6633,histological subtype,disease,0.6356,disease,cancer_status,0.634,disease status,cancer_subtype_ontology_term_id,0.5528,
+days_after_onset,stage3,semantic,treatment_start,0.5036,treatment start date,treatment_duration,0.4469,treatment duration,treatment_end,0.4349,treatment end date,treatment_duration_unit,0.3671,,age_at_diagnosis,0.3546,initial age
+ast,stage2,ontology,cancer_type,0.3,ast,disease,0.3,ast,cancer_type_details,0.3,ast,,,,,,
+alcohol,stage2,ontology,treatment_name,0.3,alcohol,,,,,,,,,,,,
+population,stage2,value,country,1.0,Dutch,,,,,,,,,,,,
+lifestyle,stage3,semantic,vital_status,0.522,living status,age_group,0.4434,life stage,treatment_name,0.4306,regimen,sex,0.4005,,country,0.3632,nation
+body_subsite,stage3,semantic,body_site,0.8014,,body_site_ontology_term_id,0.5291,,location,0.3254,study site,disease,0.2882,host disease,disease_ontology_term_id,0.2096,
+tnm,invalid,stage_column,,,,,,,,,,,,,,,
+change_in_tumor_size,stage3,semantic,cancer_type,0.6044,tumor type,cancer_subtype,0.5979,tumor subtype,cancer_status,0.5845,tumor status,cancer_type_details,0.522,,sample_type,0.516,tumor sample type
+dental_sample_type,stage3,semantic,sample_type,0.7664,sample type,specimen_type,0.6548,specimen type,study_design,0.4731,study type,specimen_type_ontology_term_id,0.4192,,body_site,0.4153,sample site
+PPD_D,stage3,semantic,treatment_type,0.5164,rad,disease,0.4475,dx,age_at_diagnosis,0.3221,age dx,treatment_dose,0.3185,dose,treatment_status,0.2965,response
+disease_stage,invalid,stage_column,,,,,,,,,,,,,,,
+disease_location,stage3,semantic,cancer_status,0.6491,disease status,disease,0.6374,disease,body_site,0.4997,biopsy site,disease_ontology_term_id,0.4802,,location,0.479,geographic location
+wbc,stage2,ontology,body_site,0.3,wbc,,,,,,,,,,,,
+rbc,stage2,ontology,body_site,0.3,rbc,,,,,,,,,,,,
+subcohort,stage3,semantic,treatment_group,0.733,cohort,cancer_subtype,0.5034,molecular subtype,cancer_type_details,0.3753,histological subtype,treatment_name,0.3489,regimen,age_group,0.3345,
+fmt_id,invalid,id_column,,,,,,,,,,,,,,,
+remission,stage3,semantic,treatment_end,0.5704,,treatment_type,0.5554,treatment,treatment_status,0.5016,,treatment_no,0.4854,,treatment_start,0.4424,treatment start
+il_1,stage2,ontology,treatment_name,0.3,il_1,,,,,,,,,,,,
+age_seroconversion,stage3,semantic,age_at_diagnosis,0.521,diagnosis age,age_at_diagnosis_max,0.4711,,age_at_death,0.4705,death age,age_at_diagnosis_min,0.4552,,age_group,0.4529,age range
+age_T1D_diagnosis,stage3,semantic,age_at_diagnosis,0.6455,diagnosis age,age_at_diagnosis_min,0.5755,,age_at_diagnosis_max,0.5407,,disease,0.5137,diagnosis,cancer_status,0.375,disease status
+previous_therapy,stage3,semantic,treatment_type,1.0,therapy,treatment_status,0.9156,therapy status,treatment_duration,0.8192,therapy duration,treatment_notes,0.7899,treatment comments,treatment_name,0.753,
+ajcc,invalid,stage_column,,,,,,,,,,,,,,,
+smoke,stage3,semantic,treatment_name,0.5167,drug,cancer_type,0.4512,cancer,sex,0.4433,,treatment_type,0.4014,chemo,ancestry,0.3716,race
+breastfeeding_duration,stage3,numeric,treatment_duration,0.6438,duration,treatment_end,0.371,treatment_end_date,treatment_frequency,0.3465,,age_at_diagnosis,0.2347,initial_age,age_at_procurement,0.2138,sampling_age
+formula_first_day,stage3,numeric,treatment_start,0.6659,start_date,treatment_end,0.4664,end_date,treatment_duration,0.3915,duration,treatment_frequency,0.3237,,age_at_diagnosis,0.2686,initial_age
